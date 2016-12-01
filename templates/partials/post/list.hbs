@@ -1,0 +1,46 @@
+<h2>Posts</h2>
+
+<a class="btn btn-warning" href="/post/{{ data.post.id }}/edit">Edit Post</a>
+<a class="btn btn-danger" href="/post/{{ data.post.id }}/delete">Delete Post</a>
+
+<div class="panel panel-default">
+    <div class= "panel-body">
+
+        <div>
+            <strong>author:</strong>{{ data.post.author }}
+        </div>
+
+        <div>
+            <strong>name:</strong> {{ data.post.name }}
+        </div>
+
+        <div>
+            <strong>description:</strong> {{ data.post.description }}
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <form method="POST" enctype="application/x-www-form-urlencoded" action="/post/{{ data.post.id }}/comment">
+            <div class="form-group">
+                <label>Comment:</label>
+                <textarea class="form-control" name="content"></textarea>
+            </div>
+            <button class="btn btn-success" type="submit">Add Comment</a>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+{{#each data.product.comments }}
+    <div class="panel panel-default">
+        <div class= "panel-body">
+            <a href="/user/{{ author.id }}">{{ author.username }}</a>
+
+            <p>{{ content }}</p>
+        </div>
+    </div>
+{{/each }}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Short Story Blog</title>
+
+    <link href="/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.less" rel="stylesheet" type="text/less">
+
+    <!-- set options before less.js script -->
+    <script>
+    less = {
+        env: "development",
+        async: false,
+        fileAsync: false,
+        poll: 1000,
+        functions: {},
+        dumpLineNumbers:"comments"
+        relativeUrls: false,
+        rootpath: ":/a.com"
+    };
+    </script>
+    <script src="/lib/less/dist/less.js"></script>
+
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+</head>
+<body>
+<div>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Creepy Stories</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/post">Post</a></li>
+                <li><a href="/true-stories">True Stories</a></li>
+                <li><a href="/folk-legend">Folk/Legend</a></li>
+                <li><a href="/mystery">Mystery</a></li>
+                <li><a href="/lets-not-meet">Lets Not Meet</a></li>
+            </ul>
+            {{#if user }}
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/user/dashboard"><span class="glyphicon glyphicon-user"></span>Dashboard</a></li>
+                <li><a href="/user/logout"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
+            </ul>
+            {{else }}
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/user/register"><span class="glyphicon glyphicon-user"></span>Register</a></li>
+                <li><a href="/user/login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+            </ul>
+            {{/if}}
+        </div>
+    </nav>
+</div>
+
+    <h1>Short Story Blog</h1>
+    <p>This is the short story app.</p>
+
+
+    {{{ body }}}
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+<h2>Folk/Legend</h2>
+
+<form method="POST" enctype="application/x-www-form-urlencoded" action="/product/{{ data.product.id }}">
+    <input name="_method" type="hidden" value="{{ data.method }}">
+
+    <input name="author" type="text" placeholder="author" value="{{ data.product.author }}">
+    <input name="name" type="text" placeholder="name" value="{{ data.product.name }}">
+    <textarea class="form-control" rows="5" placeholder="description"name="description">{{ data.product.description }}</textarea>
+
+    <button type="submit">Save Post</button>
+</form>

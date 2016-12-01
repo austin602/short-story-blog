@@ -1,0 +1,23 @@
+{
+  "name": "short-story-blog",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Austin Landon"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.9",
+    "angular-ui-router": "^0.3.2",
+    "less": "^2.7.1",
+    "bootstrap": "^3.3.7"
+  }
+}

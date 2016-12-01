@@ -1,0 +1,23 @@
+{
+  "name": "short-story-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Austin Landon",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "connect-flash": "^0.1.1",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.14.2",
+    "json-server": "^0.9.2",
+    "method-override": "^2.3.7",
+    "mongodb": "^2.2.12",
+    "mongoose": "^4.7.1",
+    "nodemon": "^1.11.0"
+  }
+}
